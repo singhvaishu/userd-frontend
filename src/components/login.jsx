@@ -37,7 +37,7 @@ const Login = () => {
         if (!validate()) return;
 
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const res = await axios.post('https://userd-backend.vercel.app/api/auth/login', { email, password });
             if (res.data) {
                 dispatch(setUser(res.data));
                 localStorage.setItem('user', JSON.stringify(res.data));
