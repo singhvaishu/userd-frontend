@@ -72,7 +72,7 @@ const Signup = () => {
         setAuthError('');
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/signup', formData, {
+            const response = await axios.post('https://userd-backend.vercel.app/api/auth/signup', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
